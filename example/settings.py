@@ -20,9 +20,13 @@ SECRET_KEY = "42uykc*+-bjmn_ylqxiy-psw7ponktl_o3#&v8#47s!zd)p)%_"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -96,9 +100,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -168,3 +172,18 @@ LOGGING = {
     #     'level': 'INFO',
     # },
 }
+
+#simple ui
+SIMPLEUI_LOGO = 'http://www.wzu.edu.cn/__local/0/E8/06/4670119A4E453581250C1D4D924_0AFE2605_4FDA.png'
+
+# 隐藏右侧SimpleUI广告链接和使用分析
+SIMPLEUI_HOME_INFO = False
+SIMPLEUI_ANALYSIS = False
+
+# 修改左侧菜单首页设置
+# SIMPLEUI_HOME_PAGE = '../index'  # 指向页面
+# SIMPLEUI_HOME_TITLE = '首页' # 首页标题
+# SIMPLEUI_HOME_ICON = 'fa fa-code' # 首页图标
+
+# 设置右上角Home图标跳转链接，会以另外一个窗口打开
+SIMPLEUI_INDEX = '../index'
